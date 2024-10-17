@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.timetable th, .timetable td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.timetable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.timetable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.timetable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav li {
+  float: left;
+  margin-right: 15px;
+}
+
+.nav li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #333;
+  transition: background-color 0.3s;
+}
+
+.nav li a:hover {
+  background-color: #575757;
+}
